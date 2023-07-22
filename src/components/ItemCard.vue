@@ -4,7 +4,7 @@ import { RouterLink } from 'vue-router'
 defineProps({
   image: String,
   title: String,
-  group_kit: String
+  description: String
 })
 </script>
 
@@ -13,18 +13,23 @@ defineProps({
           <div class="overflow-hidden border border-gray-200 rounded-xl">
             <RouterLink to="/details">
               <div class="m-4 overflow-hidden rounded-xl">
-                <img :alt="title" class="block w-full h-auto" :src="'src/assets/img/' + image" />
+                <img 
+                  :alt="title" 
+                  class="block w-full h-auto" 
+                  :src="'src/assets/img/' + image" />
               </div>
             </RouterLink>
 
             <header class="px-4 mb-4 leading-tight">
               <h1 class="text-lg">
-                <RouterLink class="font-semibold text-black no-underline hover:underline" to="#">
-                  {{ title }}
+                <RouterLink 
+                  class="font-semibold text-black no-underline hover:underline" 
+                  to="#">
+                    {{ title }}
                 </RouterLink>
               </h1>
               <span class="block text-sm font-light text-gray-500 no-underline">
-                {{ group_kit }}
+                {{ description }}
               </span>
             </header>
           </div>

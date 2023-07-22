@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import NewItemsCard from '../NewItemsCard.vue'
+import ItemCard from '../ItemCard.vue'
 
 const items = ref([
   {id: 1, title: 'Mobile UI Kit', image: 'items-1.jpg', group_kit: 'Mobile UI Kit'},
@@ -11,14 +11,14 @@ const items = ref([
 
 <template>
   <div class="container px-4 mx-auto my-16 md:px-12">
-      <h2 class="mb-4 text-xl font-medium md:mb-0 md:text-lg">New Items</h2>
+      <h2 class="mb-4 text-xl font-bold md:mb-0 md:text-lg">New Items</h2>
       <div class="flex flex-wrap -mx-1 lg:-mx-4">
-        <NewItemsCard 
+        <ItemCard 
           v-for="item in items"
           :id="item.id"
           :title="item.title"
           :image="item.image"
-          :group_kit="item.group_kit"
+          :description="item.description"
         />
       </div>
     </div>

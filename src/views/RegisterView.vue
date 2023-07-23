@@ -1,7 +1,5 @@
 <script setup>
-import Customizable from '../components/authentication/features/Customizable.vue';
-import Fortune from '../components/authentication/features/Fortune.vue';
-import Documentation from '../components/authentication/features/Documentation.vue';
+import FeatureList from '../components/authentication/FeatureList.vue';
 import SignUpForm from '@/components/authentication/SignUpForm.vue';
 </script>
 
@@ -21,12 +19,11 @@ import SignUpForm from '@/components/authentication/SignUpForm.vue';
           <div class="w-full p-5 mx-auto md:max-w-4xl">
             <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
               <div class="mx-auto md:mx-0">
-                <Customizable />
-                <Fortune />
-                <Documentation />
+                <FeatureList />
               </div>
-              
-              <SignUpForm />
+              <div>
+                <SignUpForm />
+              </div>
             </div>
           </div>
         </div>

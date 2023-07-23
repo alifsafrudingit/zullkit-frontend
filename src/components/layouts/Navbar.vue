@@ -1,4 +1,5 @@
 <script setup>
+import AuthButton from './AuthButton.vue';
 import Logo from './Logo.vue'
 import NavigationLinks from './NavigationLinks.vue'
 import UserInfo from './UserInfo.vue'
